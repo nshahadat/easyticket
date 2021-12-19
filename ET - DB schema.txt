@@ -1,0 +1,5 @@
+user - name, username, email, contact, address, id
+ticket - from location, to location, date, bus name, id, price, available seats, time
+booking - id from bus, id from user, seat number, booking id
+payment - trs_id, id from user, id from bus, payment id
+admin - username, password, id

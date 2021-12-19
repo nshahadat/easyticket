@@ -1,0 +1,24 @@
+Pages -
+ For users >
+  HomePage
+  Bus Searching
+  Payment
+ For Admins >
+  Bus Data Entry
+  User handling
+  admin
+
+Page Content -
+ HomePage
+  User login & signup
+  info about website
+ Bus Searching
+  Input details & result
+ Payment
+  Payment Gateway
+ Bus Data Entry
+  Input details by admin
+ User handling
+  user details and edit by admin
+ admin
+  admin login
