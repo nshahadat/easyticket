@@ -10,7 +10,7 @@
 							<li>
 								<a href="#"><i class="fa fa-phone"></i> +880 1621720057</a>
 								<a href="#"
-									><i class="fa fa-envelope"></i> shahadatnayeem23@gmail.com</a
+									><i class="fa fa-envelope"></i> nshahadat3@gmail.com</a
 								>
 							</li>
 						</ul>
