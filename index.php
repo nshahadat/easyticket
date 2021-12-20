@@ -3,7 +3,7 @@ include "include/header.php";
 include "include/navbar.php";
 ?>
 
-<p style="text-align:center; color:#4CAF50;">You must be registered and logged in to search and buy tickets form Easy Ticket.</p>
+<p style="text-align:center; color:#5e8d93;">You must be registered and logged in to search and buy tickets form Easy Ticket.</p>
 <div class="login-page" id="login">
     <div class="form">
         <form class="login-form">
@@ -24,7 +24,7 @@ include "include/navbar.php";
             <input type="text" name="reg_address"   placeholder="address"/>
             <input type="password" name="reg_pwd"   placeholder="password" required/>
             <input type="password" name="reg_con_pwd"   placeholder="confirm password" required/>
-            <button>login</button>
+            <button>Register</button>
             <p class="message">Already registered? <a href="#login">Login</a></p>
         </form>
     </div>
