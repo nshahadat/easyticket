@@ -9,7 +9,7 @@ include "include/navbar.php";
         <form class="login-form">
             <input type="text" name="login_username" placeholder="username"/>
             <input type="password" name="login_pwd"  placeholder="password"/>
-            <button>login</button>
+            <input type="submit" name="log_btn"  value="Login" required/>
             <p class="message">Not registered? <a href="#register">Create an account</a></p>
         </form>
     </div>
@@ -24,7 +24,7 @@ include "include/navbar.php";
             <input type="text" name="reg_address"   placeholder="address"/>
             <input type="password" name="reg_pwd"   placeholder="password" required/>
             <input type="password" name="reg_con_pwd"   placeholder="confirm password" required/>
-            <input type="submit" name="btn"  value="Register" required/>
+            <input type="submit" name="reg_btn"  value="Register" required/>
             <p class="message">Already registered? <a href="#login">Login</a></p>
         </form>
     </div>
