@@ -289,7 +289,7 @@ ul {
 .container .info span .fa {
 	color: #5e8d93;
 }
-input[type=button], input[type=submit], input[type=reset] {
+input[type=button], input[type=submit], input[type=reset]{
 	font-family: "Roboto", sans-serif;
 	text-transform: uppercase;
 	outline: 0;
@@ -306,6 +306,17 @@ input[type=button], input[type=submit], input[type=reset] {
 input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover{
 	background-color: #43A047;
 }
+input[type=tel], input[type=number]{
+	font-family: "Roboto", sans-serif;
+	outline: 0;
+	background: #f2f2f2;
+	width: 100%;
+	border: 0;
+	margin: 0 0 15px;
+	padding: 15px;
+	box-sizing: border-box;
+	font-size: 14px;
+}
 /*Login css end*/
 /* Scrollbar START */
 ::-webkit-scrollbar {
@@ -319,3 +330,50 @@ input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover{
 	background: #5e8d93;
 }
 /* Scrollbar END */
+
+.custom-select {
+	position: relative;
+	font-family: Arial;
+}  
+.custom-select select {
+	display: none;
+}  
+.select-selected {
+	background-color: #5e8d93;
+}
+.select-selected:after {
+	position: absolute;
+	content: "";
+	top: 14px;
+	right: 10px;
+	width: 0;
+	height: 0;
+	border: 6px solid transparent;
+	border-color: #fff transparent transparent transparent;
+}
+.select-selected.select-arrow-active:after {
+	border-color: transparent transparent #fff transparent;
+	top: 7px;
+}
+.select-items div,.select-selected {
+	color: #ffffff;
+	padding: 8px 16px;
+	border: 1px solid transparent;
+	border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+	cursor: pointer;
+	user-select: none;
+}
+.select-items {
+	position: absolute;
+	background-color: #5e8d93;
+	top: 100%;
+	left: 0;
+	right: 0;
+	z-index: 99;
+}
+.select-hide {
+	display: none;
+}
+.select-items div:hover, .same-as-selected {
+	background-color: rgba(0, 0, 0, 0.1);
+}
