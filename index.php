@@ -24,7 +24,7 @@ include "include/navbar.php";
             <input type="text" name="reg_address"   placeholder="address"/>
             <input type="password" name="reg_pwd"   placeholder="password" required/>
             <input type="password" name="reg_con_pwd"   placeholder="confirm password" required/>
-            <button>Register</button>
+            <input type="submit" name="btn"  value="Register" required/>
             <p class="message">Already registered? <a href="#login">Login</a></p>
         </form>
     </div>

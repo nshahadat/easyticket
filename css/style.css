@@ -289,6 +289,23 @@ ul {
 .container .info span .fa {
 	color: #5e8d93;
 }
+input[type=button], input[type=submit], input[type=reset] {
+	font-family: "Roboto", sans-serif;
+	text-transform: uppercase;
+	outline: 0;
+	background-color: #5e8d93;
+	width: 100%;
+	border: 0;
+	padding: 15px;
+	color: #FFFFFF;
+	font-size: 14px;
+	-webkit-transition: all 0.3 ease;
+	transition: all 0.3 ease;
+	cursor: pointer;
+}
+input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover{
+	background-color: #43A047;
+}
 /*Login css end*/
 /* Scrollbar START */
 ::-webkit-scrollbar {
