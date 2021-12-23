@@ -214,7 +214,7 @@ ul {
 	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 .form input {
-	font-family: "Roboto", sans-serif;
+	font-family: "Poppins", sans-serif;
 	outline: 0;
 	background: #f2f2f2;
 	width: 100%;
@@ -225,7 +225,7 @@ ul {
 	font-size: 14px;
 }
 .form button {
-	font-family: "Roboto", sans-serif;
+	font-family: "Poppins", sans-serif;
 	text-transform: uppercase;
 	outline: 0;
 	background: #5e8d93;
@@ -291,7 +291,7 @@ ul {
 	color: #5e8d93;
 }
 input[type=button], input[type=submit], input[type=reset]{
-	font-family: "Roboto", sans-serif;
+	font-family: "Poppins", sans-serif;
 	text-transform: uppercase;
 	outline: 0;
 	background-color: #5e8d93;
@@ -308,7 +308,7 @@ input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover{
 	background-color: #43A047;
 }
 input[type=tel], input[type=number]{
-	font-family: "Roboto", sans-serif;
+	font-family: "Poppins", sans-serif;
 	outline: 0;
 	background: #f2f2f2;
 	width: 100%;
@@ -334,7 +334,7 @@ input[type=tel], input[type=number]{
 
 .custom-select {
 	position: relative;
-	font-family: Arial;
+	font-family: "Poppins", sans-serif;
 }  
 .custom-select select {
 	display: none;
