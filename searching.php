@@ -52,17 +52,21 @@ if(isset($_POST['search_btn'])){
 
     $sql = "SELECT * FROM $ticket WHERE from_location = 'searching_from' AND to_location = 'searching_to' AND date = '$date_travel'";
 
+    $result  = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
+    $numrows = mysqli_num_rows($result);
+    print($numrows);
+
     if ($numrows == 0) {
         echo "<script>alert('Sorry there are no bus(s) available according to your search.')</script>";
     } else {
-        echo "<p> Here are the bus(s) that are available.</p>";?>
+        echo "<p> Here are the bus(s) that are available.</p>";
         
-        <button type="button" class="collapsible">Buses</button>
-            <div class="content">
-                <p>Saint Martin Travels</p>
-            </div>
+        // <button type="button" class="collapsible">Buses</button>
+        //     <div class="content">
+        //         <p>Saint Martin Travels</p>
+        //     </div>
 
-        <?php }
+        }
 }
 
 ?>
