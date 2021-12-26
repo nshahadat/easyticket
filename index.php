@@ -71,11 +71,8 @@ if (isset($_POST['reg_btn'])){
         header("Location: index.php");
     }
     else{
-        echo "<script>alert('Insert accurate information')</script>";
+        echo "<script>alert('Password and Confirm Password has to match.')</script>";
     }
-}
-else{
-    echo "<script>alert('Password and Confirm Password has to match.')</script>";
 }
 ?>
 
