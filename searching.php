@@ -42,5 +42,31 @@ include "include/navbar.php";
 </div>
 
 <?php
+
+include "include/db_config.php";
+
+if(isset($_POST['search_btn'])){
+    $searching_from = $_POST['searching_from'];
+    $searching_to = $_POST['searching_to'];
+    $date_travel = $_POST['date_travel'];
+
+    $sql = "SELECT * FROM $ticket WHERE from_location = 'searching_from' AND to_location = 'searching_to' AND date = '$date_travel'";
+
+    if ($numrows == 0) {
+        echo "<script>alert('Sorry there are no bus(s) available according to your search.')</script>";
+    } else {
+        echo "<p> Here are the bus(s) that are available.</p>";?>
+        
+        <button type="button" class="collapsible">Buses</button>
+            <div class="content">
+                <p>Saint Martin Travels</p>
+            </div>
+
+        <?php }
+}
+
+?>
+
+<?php
 include "include/footer.php";
 ?>

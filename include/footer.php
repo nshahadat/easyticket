@@ -1,4 +1,5 @@
 <script type="text/javascript" src="js/custom-select.js"></script>
+<script type="text/javascript" src="js/collapsible-button.js"></script>
 
     </body>
     <footer class="footer">
