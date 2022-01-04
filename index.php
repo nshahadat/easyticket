@@ -42,11 +42,16 @@ if (isset($_POST['log_btn'])){
     $result  = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
     $numrows = mysqli_num_rows($result);
 
+    while($row = mysqli_fetch_assoc($result)){
+        $login_id = $row['id'];
+    }
+
     if ($numrows == 0) {
         echo "<script>alert('Wrong username or password')</script>";
     } else {
         session_start();
         $_SESSION['name'] = $login_username;
+        $_SESSION['id'] = $login_id;
 
         header("Location: searching.php");
 

@@ -5,8 +5,8 @@ include "include/navbar.php";
 
 <div  style="text-align: right; padding-top: 30px; padding-right:20px;">
     <p>hello admin, &nbsp;<a href="admin-login.php" style="text-decoration:none !important;">
-    <input type="button" name="logout" value="Logout" style="width:fit-content; background:none; color:#5e8d93 !important;"></a>
-</p>
+        <input type="button" name="logout" value="Logout" style="width:fit-content; background:none; color:#5e8d93 !important;"></a>
+    </p>
 </div>
 
 <p style="text-align:center; color:#5e8d93;">Enter information.</p>
