@@ -9,9 +9,9 @@
 						<h4>Contact</h4>
 						<ul>
 							<li>
-								<a href="#"><i class="fa fa-phone"></i> +880 1621720057</a>
+								<a href="#"><i class="fa fa-phone"></i> +880 100000000</a>
 								<a href="#"
-									><i class="fa fa-envelope"></i> nshahadat3@gmail.com</a
+									><i class="fa fa-envelope"></i> dummy3@gmail.com</a
 								>
 							</li>
 						</ul>
@@ -22,7 +22,7 @@
 						<ul>
 							<li>
 								<a href="#"
-									>Block #F, Road #06, House #12, Mirpur-1, Dhaka-1216.</a
+									>Gabtoli Bus Stand.</a
 								>
 							</li>
 						</ul>
@@ -47,7 +47,7 @@
 					</div>
 				</div>
 				<div class="footer-bottom">
-					&copy; Shahadat Nayeem | Arnob Mallick | Hasibul Hassan Sarkar
+					&copy; A | B | C
 				</div>
 			</div>
 		</footer>
