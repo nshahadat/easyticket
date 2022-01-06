@@ -73,6 +73,7 @@ if(isset($_POST['search_btn'])){
         while($row = mysqli_fetch_assoc($result)){
             $_SESSION['ticket_id_session'] = $row["ticket_id"];
             $_SESSION['avl_seats_session'] = $row["available_seats"];
+            $_SESSION['price_session'] = $row["price"];
             ?>
         <div class="login-page" id="login">
             <form method="POST">
@@ -106,6 +107,7 @@ if(isset($_POST['booking_btn'])){
     $avl_seats_before = $_SESSION['avl_seats_session'];
     $amount = 1;
     $avl_seats_after = $avl_seats_before - $amount;
+    $price_payment = $_SESSION['price_session'];
 
     $query = "INSERT IGNORE INTO $booking(booking_id,ticket_id,user_id,bus_name) VALUES ('$booking_id','$ticket_id','$user_id','$bus_name')";
 

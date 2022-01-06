@@ -40,12 +40,16 @@ if (isset($_POST['payment_submit_btn'])){
     $payment_amount = $_POST['payment_amount'];
     $user_id = $_SESSION['id'];
     $ticket_id = $_SESSION['ticket_id_session'];
+    $price_payment = $_SESSION['price_session'];
+
+    if($payment_amount == $price_payment){
 
     $sql = "INSERT IGNORE INTO $payment(user_id,ticket_id,amount,mobile) VALUES ('$user_id','$ticket_id','$payment_amount','$payment_mobile')";
     $mysqli->query($sql) or die($mysqli->error);
 
     echo "<script>alert('Payment succesful and booking cofirmed.')</script>";
     //header("Location: index.php");
+    } else{echo "<script>alert('Pay the accurate price please!');</script>";}
 }
 else {
     echo "<script>alert('Please fill up all the information in the correct way.')</script>";
