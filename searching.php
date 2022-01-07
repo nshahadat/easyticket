@@ -103,18 +103,22 @@ if(isset($_POST['booking_btn'])){
     $ticket_id = $_SESSION['ticket_id_session'];
     $user_id = $_POST['hidden_user_id'];
     $booking_id = $ticket_id + $user_id;
+    $_SESSION['booking_id_session'] = $booking_id;
+    $_SESSION['user_id_session'] = $user_id;
     $bus_name = $_POST['hidden_bus_name'];
+    $_SESSION['bus_name_session'] = $bus_name;
     $avl_seats_before = $_SESSION['avl_seats_session'];
     $amount = 1;
     $avl_seats_after = $avl_seats_before - $amount;
+    $_SESSION['avl_seats_after_session'] = $avl_seats_after;
     $price_payment = $_SESSION['price_session'];
 
-    $query = "INSERT IGNORE INTO $booking(booking_id,ticket_id,user_id,bus_name) VALUES ('$booking_id','$ticket_id','$user_id','$bus_name')";
+    // $query = "INSERT IGNORE INTO $booking(booking_id,ticket_id,user_id,bus_name) VALUES ('$booking_id','$ticket_id','$user_id','$bus_name')";
 
-    $result  = mysqli_query($mysqli, $query) or die(mysqli_error($mysqli));
+    // $result  = mysqli_query($mysqli, $query) or die(mysqli_error($mysqli));
 
-    $update_sql = "UPDATE $ticket SET available_seats = '$avl_seats_after' WHERE ticket_id = '$ticket_id'";
-    $result  = mysqli_query($mysqli, $update_sql) or die(mysqli_error($mysqli));
+    // $update_sql = "UPDATE $ticket SET available_seats = '$avl_seats_after' WHERE ticket_id = '$ticket_id'";
+    // $result  = mysqli_query($mysqli, $update_sql) or die(mysqli_error($mysqli));
     header("Location: payment.php");
 
 }

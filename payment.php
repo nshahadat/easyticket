@@ -24,7 +24,7 @@ session_start();
     </div>
     <br>
     <p>Enter your mobile number </p>
-    <input type="tel" name="payment_mobile" placeholder="Mobile No"/>
+    <input type="tel" pattern="{0}{1}[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]" name="payment_mobile" placeholder="Mobile No"/>
     <p>Set the amount</p>
     <input type="number" name="payment_amount" placeholder="Amount"/>
     <input type="submit" value="Pay" name="payment_submit_btn">
@@ -41,11 +41,21 @@ if (isset($_POST['payment_submit_btn'])){
     $user_id = $_SESSION['id'];
     $ticket_id = $_SESSION['ticket_id_session'];
     $price_payment = $_SESSION['price_session'];
+    $booking_id = $_SESSION['booking_id_session'];
+    $bus_name = $_SESSION['bus_name_session'];
+    $avl_seats_after = $_SESSION['avl_seats_after_session'];
 
     if($payment_amount == $price_payment){
 
     $sql = "INSERT IGNORE INTO $payment(user_id,ticket_id,amount,mobile) VALUES ('$user_id','$ticket_id','$payment_amount','$payment_mobile')";
     $mysqli->query($sql) or die($mysqli->error);
+
+    $query = "INSERT IGNORE INTO $booking(booking_id,ticket_id,user_id,bus_name) VALUES ('$booking_id','$ticket_id','$user_id','$bus_name')";
+
+    $result  = mysqli_query($mysqli, $query) or die(mysqli_error($mysqli));
+
+    $update_sql = "UPDATE $ticket SET available_seats = '$avl_seats_after' WHERE ticket_id = '$ticket_id'";
+    $result  = mysqli_query($mysqli, $update_sql) or die(mysqli_error($mysqli));
 
     echo "<script>alert('Payment succesful and booking cofirmed.')</script>";
     //header("Location: index.php");
